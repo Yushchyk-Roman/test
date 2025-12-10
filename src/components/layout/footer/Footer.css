@@ -1,0 +1,35 @@
+footer {
+  height: 80px;
+  background-color: var(--footer-bg);
+  align-items: center;
+}
+
+footer ul {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  align-items: center;
+}
+
+footer ul li {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+footer ul li:last-child {
+  margin-right: 60px;
+  margin-left: auto;
+}
+
+footer ul li:first-child {
+  margin-left: 60px;
+}
+
+footer ul li:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}

@@ -1,0 +1,152 @@
+.recipe-sidebar {
+  width: 100%;
+}
+.recipe-sidebar .center-information {
+  display: flex;
+  flex-direction: column;
+}
+.recipe-sidebar .center-information img, .userProfilePhoto {
+  margin: 10px auto 20px auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.recipe-sidebar .center-information p {
+  margin: 10px auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.recipe-sidebar button {
+  background-color: #111;
+  color: #fff;
+}
+
+.recipe-sidebar .center-information .edit-user-profile {
+  width: 12.4rem;
+  margin: 0 auto 36px auto;
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.user-statistics {
+  max-width: 360px;
+  margin: 0 auto;
+  position: relative;
+  padding: 26px 20px 20px;
+  border: 2px solid var(--all-txt-color);
+  border-radius: 14px;
+  background: var(--body-color);
+  box-shadow: 0 6px 18px var(--box-shadow-stat-color);
+}
+
+.user-statistics h2 {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  padding: 0 10px;
+  background: var(--body-color);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.statistic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.statistic-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 15px;
+  color: var(--all-txt-color);
+}
+
+.statistic-list li span {
+  font-weight: 600;
+}
+
+.user-log-out {
+  width: 200px;
+  margin-top: 20px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.edit-user-info{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-self: center;
+  row-gap: 10px;
+}
+
+.edit-user-info .chng-user-pas{
+  display: block;
+  width: 45%;
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  /* background-color: var(--main-color); */
+  /* background-color: var(--body-color); */
+  /* color: var(--all-txt-color); */
+
+  /* box-shadow: 2px 2px 4px var(--all-txt-color); */
+}
+
+.edit-user-info .user-profile-actions{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 20px auto;
+  justify-content: center;
+  gap: 30px;
+}
+
+.edit-user-info .user-profile-actions button{
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.edit-user-info .user-profile-actions button:hover{
+  transform: translateY(-2px);
+}
+
+.edit-user-info .user-profile-actions .cancel-user-data-changes{
+  background-color: var(--body-color);
+  color: var(--all-txt-color);
+  border: 1px solid #b3b3b3;
+}
+
+.edit-user-info .user-profile-actions .save-user-data-changes{
+  background-color: var(--main-color);
+}
+
+#userName{
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 2px solid var(--main-color);
+  /* border: none;    */
+font-size: 12px;
+}
+
+.edit-user-info label{
+  font-size: 14px;
+}

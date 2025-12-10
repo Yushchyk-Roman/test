@@ -1,0 +1,17 @@
+.blog-main {
+  margin-top: 40px;
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.blog-main .filter {
+  flex: 0 0 25%;
+}
+
+.blog-main .filter ul .category-item button {
+  font-size: 20px;
+}
+
+.blog-main .blog-section {
+  flex: 0 0 75%;
+}

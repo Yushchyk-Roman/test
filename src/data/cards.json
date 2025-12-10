@@ -1,0 +1,281 @@
+[
+  {
+    "type": "soups",
+    "title": "Bohrach",
+    "imageUrl": "/assets/images/bohrach.jpg",
+    "stars": 5,
+    "seen": 100,
+    "likes": 50,
+    "comments": [
+      {
+        "author": "John Doe",
+        "avatar": "../assets/images/default-user.png",
+        "text": "This recipe is amazing! I loved it.",
+        "date": "2023-10-01"
+      },
+      {
+        "author": "Jane Smith",
+        "avatar": "../assets/images/default-user.png",
+        "text": "I tried this and it turned out great!",
+        "date": "2023-10-02"
+      }
+    ],
+    "instructions": [
+      "Prepare the ingredients. ",
+      "Cook the meat.",
+      "Add vegetables and spices.",
+      "Serve hot."
+    ],
+    "ingredients": ["1 kg of meat", "2 cups of vegetables", "Spices to taste"],
+    "author": "Chef Alex",
+    "time_of_cooking": 45
+  },
+  {
+    "type": "soups",
+    "title": "Borshch",
+    "imageUrl": "/assets/images/borsch.jpg",
+    "stars": 5,
+    "seen": 230,
+    "likes": 110,
+    "comments": [
+      {
+        "author": "Nastia",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2024-04-01"
+      }
+    ],
+    "instructions": [
+      "Зварити бульйон.",
+      "Додати буряк, капусту, моркву та картоплю.",
+      "Приправити спеціями.",
+      "Подавати зі сметаною."
+    ],
+    "ingredients": [
+      "500 г буряка",
+      "1 л бульйону",
+      "капуста",
+      "картопля",
+      "морква"
+    ],
+    "author": "Chef Olena",
+    "time_of_cooking": 60
+  },
+  {
+    "type": "desserts",
+    "title": "Cheesecake",
+    "imageUrl": "../assets/images/cheesecake.jpg",
+    "stars": 4,
+    "seen": 150,
+    "likes": 80,
+    "comments": [],
+    "instructions": [
+      "Змішати сир, яйця, цукор.",
+      "Вилити масу на основу з печива.",
+      "Запікати у духовці 45 хв.",
+      "Охолодити перед подачею."
+    ],
+    "ingredients": ["500 г сиру", "3 яйця", "цукор", "печиво", "масло"],
+    "author": "Pastry Master",
+    "time_of_cooking": 90
+  },
+  {
+    "type": "soups",
+    "title": "Green Borsch",
+    "imageUrl": "/assets/images/green-borshch.jpg",
+    "stars": 4,
+    "seen": 95,
+    "likes": 40,
+    "comments": [],
+    "instructions": [
+      "Зварити бульйон.",
+      "Додати щавель, картоплю, яйце.",
+      "Приправити за смаком.",
+      "Подавати зі сметаною."
+    ],
+    "ingredients": ["щавель", "3 яйця", "бульйон", "картопля", "морква"],
+    "author": "Chef Max",
+    "time_of_cooking": 40
+  },
+  {
+    "type": "soups",
+    "title": "Mushroom Soup",
+    "imageUrl": "../assets/images/mushroom-soup.jpg",
+    "stars": 5,
+    "seen": 180,
+    "likes": 90,
+    "comments": [],
+    "instructions": [
+      "Обсмажити гриби.",
+      "Додати овочі та воду.",
+      "Варити 30 хв.",
+      "Додати вершки перед подачею."
+    ],
+    "ingredients": ["гриби", "картопля", "морква", "вершки", "цибуля"],
+    "author": "Chef Dima",
+    "time_of_cooking": 45
+  },
+  {
+    "type": "vegetarian_dishes",
+    "title": "Pumpkin Soup",
+    "imageUrl": "../assets/images/pumpkin-soup.jpg",
+    "stars": 0,
+    "seen": 120,
+    "likes": 50,
+    "comments": [],
+    "instructions": [
+      "Запекти гарбуз.",
+      "Змішати з бульйоном.",
+      "Проварити 10 хв.",
+      "Збити блендером."
+    ],
+    "ingredients": ["гарбуз", "бульйон", "вершки", "цибуля", "спеції"],
+    "author": "Chef Marta",
+    "time_of_cooking": 35
+  },
+  {
+    "type": "soups",
+    "title": "Rosil",
+    "imageUrl": "../assets/images/rosil.jpg",
+    "stars": 3,
+    "seen": 80,
+    "likes": 30,
+    "comments": [],
+    "instructions": [
+      "Зварити кістковий бульйон.",
+      "Додати локшину та моркву.",
+      "Варити до готовності.",
+      "Подавати гарячим."
+    ],
+    "ingredients": ["курячі кістки", "локшина", "морква", "цибуля", "зелень"],
+    "author": "Chef Viktor",
+    "time_of_cooking": 50
+  },
+  {
+    "type": "main_dishes",
+    "title": "Spagetti",
+    "imageUrl": "../assets/images/spagetti.jpg",
+    "stars": 5,
+    "seen": 200,
+    "likes": 100,
+    "comments": [],
+    "instructions": [
+      "Зварити пасту.",
+      "Підсмажити соус.",
+      "Змішати пасту з соусом.",
+      "Подавати з сиром."
+    ],
+    "ingredients": ["спагетті", "томатний соус", "часник", "олія", "сир"],
+    "author": "Chef Antonio",
+    "time_of_cooking": 25
+  },
+  {
+    "type": "desserts",
+    "title": "Strawberries Cake",
+    "imageUrl": "../assets/images/strawberries_cake.jpg",
+    "stars": 4,
+    "seen": 140,
+    "likes": 60,
+    "comments": [],
+    "instructions": [
+      "Приготувати бісквіт.",
+      "Змастити кремом.",
+      "Додати полуницю зверху.",
+      "Охолодити."
+    ],
+    "ingredients": ["яйця", "борошно", "цукор", "вершки", "полуниця"],
+    "author": "Chef Lili",
+    "time_of_cooking": 90
+  },
+  {
+    "type": "desserts",
+    "title": "Strawberries",
+    "imageUrl": "../assets/images/strawberries.jpg",
+    "stars": 3,
+    "seen": 70,
+    "likes": 25,
+    "comments": [],
+    "instructions": ["Помити полуницю.", "Подавати з цукром або вершками."],
+    "ingredients": ["полуниця", "цукор", "вершки"],
+    "author": "Chef Lili",
+    "time_of_cooking": 5
+  },
+  {
+    "type": "soups",
+    "title": "Tomato Soup",
+    "imageUrl": "../assets/images/tomato-soup.jpg",
+    "stars": 4,
+    "seen": 130,
+    "likes": 55,
+    "comments": [],
+    "instructions": [
+      "Обсмажити овочі.",
+      "Додати томати та воду.",
+      "Проварити.",
+      "Подавати з грінками."
+    ],
+    "ingredients": ["помідори", "цибуля", "морква", "сіль", "перець"],
+    "author": "Chef Vera",
+    "time_of_cooking": 40
+  },
+  {
+    "type": "vegetarian_dishes",
+    "title": "Arabic",
+    "imageUrl": "../assets/images/veg-mix.jpg",
+    "stars": 3,
+    "seen": 390,
+    "likes": 245,
+    "comments": [
+        {
+        "author": "Nastia",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2024-04-01"
+      },
+        {
+        "author": "nazar",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2024-04-01"
+      },
+        {
+        "author": "Nastia",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2010-09-01"
+      },
+        {
+        "author": "Olha",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2004-04-01"
+      },
+        {
+        "author": "Katerina",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2024-05-01"
+      },
+        {
+        "author": "Nastia",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2014-04-01"
+      },
+        {
+        "author": "Olena",
+        "avatar": "../assets/images/default-user.png",
+        "text": "Справжній смак дитинства!",
+        "date": "2022-04-01"
+      }
+    ],
+    "instructions": [
+      "Нарізати овочі.",
+      "Змішати з олією та спеціями.",
+      "Подавати свіжим."
+    ],
+    "ingredients": ["огірок", "помідор", "перець", "цибуля", "олія"],
+    "author": "Chef Nature",
+    "time_of_cooking": 15
+  }
+]

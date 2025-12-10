@@ -1,0 +1,128 @@
+
+.card-right .comments {
+  background-color: var(--comments-bg);
+  border-radius: 12px;
+  margin: 10px;
+  padding-bottom: 40px;
+  min-height: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+.card-right .comments .comment-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 20px;
+  color: var(--comments-header);
+}
+
+.card-right .comments ul {
+  gap: 10px;
+}
+
+.card-right .comments ul li {
+  margin: 0 10px 10px 10px;
+  border-radius: 10px;
+  align-items: flex-start;
+  background-color: var(--comments-color); 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-right .comments ul li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.card-right .comments ul li article p {
+  display: block;
+  padding: 10px 0;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+  margin-bottom: 5px;
+  color: var(--comment);
+  line-height: 1.4;
+}
+.card-right .comments ul li .noComments{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-right .comments ul li article .like-comment {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -5px;
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.card-right .comments ul li header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  gap: 10px;
+}
+
+.card-right .comments ul li header img {
+  border-radius: 50%;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.card-right .comments ul li header span {
+  font-weight: bold;
+  color: var(--comments-header);
+}
+
+.card-right .comments ul li header time {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 12px;
+  color: #888;
+}
+
+.card-right .comments ul .add-comment {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 10px 16px;
+}
+
+.card-right .comments ul .add-comment input {
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.card-right .comments ul .add-comment input::placeholder {
+  color: #fff;
+}
+
+.card-right .comments ul .add-comment input:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.card-right .comments ul .add-comment input:focus {
+  background-color: var(--comment-input);
+  color: var(--txt-color);
+  font-size: 16px;
+  box-shadow: 0 0 0 3px var(--box-shadow-comment);
+}

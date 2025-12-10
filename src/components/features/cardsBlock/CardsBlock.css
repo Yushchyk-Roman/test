@@ -1,0 +1,37 @@
+.text-container {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 24px;
+  width: fit-content;
+}
+.text-container hr {
+  background-color: var(--main-color);
+  height: 6px;
+  border-radius: 20px;
+  border: none;
+  width: calc(100% + 20px);
+}
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+.category-cards .card, .category-cards .add-new-card button {
+  background-color: var(--category-card-block);
+}
+
+.category-cards .add-new-card button{
+  color: var(--txt-color);
+  font-size: 150px;
+  font-weight: lighter;
+  width: 304px;
+  height: 368px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-cards .add-new-card button:hover{
+transform: translateY(-2px);
+}

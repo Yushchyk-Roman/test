@@ -1,0 +1,154 @@
+.form-overlay {
+  z-index: 900;
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.bg-form-edit {
+  cursor: default;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  max-width: 1000px;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  background-color: var(--full-card);
+  z-index: 901;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.edit-form {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 90%;
+  border-radius: 10px;
+}
+.edit-form::-webkit-scrollbar{
+  width: 0;
+}
+.bg-form-edit .close-btn {
+  color: var(--all-txt-color);
+  background-color: var(--body-color);
+  font-size: 32px;
+  top: 12px;
+  right: 24px;
+}
+
+.card-for-editing {
+  width: 40%;
+}
+
+.edit-form textarea,
+.edit-form input,
+.edit-form button {
+  background-color: var(--edit-buttons-bg);
+  border: 2px solid var(--edit-button-borders);
+  font-size: 16px;
+  color: var(--txt-color);
+}
+
+.edit-form textarea {
+  resize: none;
+  overflow-y: scroll;
+  min-height: 100px;
+  max-height: 200px;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.edit-form textarea::-webkit-scrollbar {
+  width: 0;
+}
+.edit-form h3 {
+  align-self: center;
+  font-size: 24px;
+}
+
+.edit-form h3 i {
+  font-size: 20px;
+  margin-left: 12px;
+  color: var(--main-color);
+}
+
+.edit-form label {
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+}
+
+.edit-form label i {
+  margin-right: 12px;
+  color: var(--main-color);
+}
+.edit-form input {
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.edit-form .edit-actions {
+  margin-bottom: 20px;
+  height: 100px;
+  margin-top: 60px;
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+}
+.edit-form button {
+  height: fit-content;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  width: 100px;
+  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out,
+    font-weight 0.9s ease-in-out, transform 0.3s ease-in-out,
+    width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.edit-form button:hover {
+  background-color: var(--main-color-active);
+  color: #fff;
+  font-weight: bold;
+  transform: translateY(-2px);
+  width: 120px;
+  padding: 16px 24px;
+}
+
+.edit-form button:active {
+  transform: translateY(4px);
+}
+
+.edit-form .save-changes {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+.edit-form .cancel-changes {
+  background-color: var( --edit-button-cancel-bg);
+}
+
+.edit-form .cancel-changes:hover {
+  background-color: var( --edit-btn-cancel-hover-bg);
+  color: var(--edit-btn-cancel-hover-clr);
+}
+.edit-form .img-preview{
+    max-height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin: 30px auto;
+}

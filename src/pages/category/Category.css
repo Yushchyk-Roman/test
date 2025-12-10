@@ -1,0 +1,7 @@
+.category-page{
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+     margin-bottom: 200px;
+    
+}

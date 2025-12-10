@@ -1,0 +1,6 @@
+.main-user-page-information{
+    display: grid;
+    grid-template-columns: 25% 70%;
+    gap: 30px;
+    margin: 200px 0;
+}

@@ -1,0 +1,23 @@
+.create-new-card {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 368px;
+  transition: 0.2s ease-in-out;
+}
+
+.create-new-card:hover {
+  background: #f9f9f9;
+  border-color: #999;
+}
+
+.new-card-button {
+  font-size: 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #666;
+}

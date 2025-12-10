@@ -1,0 +1,70 @@
+:root {
+  --main-color: #e5a329;
+  --main-color-active: #c17d00;
+  --home-section-bg: #d9d9d9;
+  --circle-shadow: #000;
+  --body-color: #fff;
+  --all-txt-color: #000;
+  --footer-bg: #d9d9d9;
+  --card-bg: #fff;
+  --card-author-span: #000;
+  --control-panel-bg: rgba(143, 143, 143, 0.2);
+  --change-theme-i: #000;
+  --category-card-block: #e7e7e7;
+  --close-btn: #333;
+  --btn-bg: #fff;
+  --btn-actions: #000;
+  --comments-bg: #f9f9f9;
+  --full-card: #fff;
+  --comments-color: #fff;
+  --comments-header: #333;
+  --comment: #444;
+  --comment-input: #fff;
+  --box-shadow-comment: rgba(229, 163, 41, 0.3);
+  --edit-buttons-bg: #ebebeb;
+  --edit-button-borders: #d8d8d8;
+  --edit-button-cancel-bg: initial;
+  --edit-btn-cancel-hover-bg: #ebebeb;
+  --edit-btn-cancel-hover-clr: #666666;
+  --box-shadow-stat-color: rgba(0, 0, 0, 0.06);
+  --user-page-bg: #f5f5f5;
+}
+
+.dark-theme {
+  --main-color: #ff6a00;
+  --main-color-active: #bb550c;
+  --home-section-bg: #161616;
+  --circle-shadow: #777777;
+  --body-color: #121212;
+  --all-txt-color: #fff;
+  --footer-bg: #2d2d2d;
+  --card-bg: rgb(41, 41, 41);
+  --card-author-span: #848484;
+  --control-panel-bg: #1e1e1e;
+  --change-theme-i: #ffffff;
+  --category-card-block: #1d1d1d;
+  --close-btn: #ccc;
+  --btn-bg: #121212;
+  --btn-actions: #999;
+  --comments-bg: #0404042a;
+  --full-card: #161616;
+  --comments-color: #222222;
+  --comments-header: #ddd;
+  --comment: #bebebe;
+  --comment-input: #292929;
+  --box-shadow-comment: rgba(216, 216, 216, 0.3);
+  --edit-buttons-bg: #272727;
+  --edit-button-borders: #252525;
+  --edit-button-cancel-bg: #161616;
+  --edit-btn-cancel-hover-bg: #272727;
+  --edit-btn-cancel-hover-clr: #fff;
+  --box-shadow-stat-color: rgba(255, 255, 255, 0.9);
+  --user-page-bg: #0a0a0a;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: var(--body-color);
+  color: var(--all-txt-color);
+}

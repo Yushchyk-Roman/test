@@ -1,0 +1,12 @@
+[
+  { "label": "All dishes", "value": "all" },
+  { "label": "Soups", "value": "soups" },
+  { "label": "Salads", "value": "salads" },
+  { "label": "Main dishes", "value": "main_dishes" },
+  { "label": "Desserts", "value": "desserts" },
+  { "label": "Baking", "value": "baking" },
+  { "label": "Marinades", "value": "marinades" },
+  { "label": "Fish dishes", "value": "fish_dishes" },
+  { "label": "Meat dishes", "value": "meat_dishes" },
+  { "label": "Vegetarian dishes", "value": "vegetarian_dishes" }
+]
