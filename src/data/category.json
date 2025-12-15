@@ -8,5 +8,5 @@
   { "label": "Marinades", "value": "marinades" },
   { "label": "Fish dishes", "value": "fish_dishes" },
   { "label": "Meat dishes", "value": "meat_dishes" },
-  { "label": "Vegetarian dishes", "value": "vegetarian_dishes" }
+  { "order": "Vegetarian dishes", "value": "vegetarian_dishes" }
 ]

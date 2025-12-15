@@ -9,15 +9,21 @@
     "comments": [
       {
         "author": "John Doe",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "../../public/assets/images/default-user.png",
         "text": "This recipe is amazing! I loved it.",
-        "date": "2023-10-01"
+        "date": "2023-10-01",
+        "commentId": 0,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
       {
         "author": "Jane Smith",
         "avatar": "../assets/images/default-user.png",
         "text": "I tried this and it turned out great!",
-        "date": "2023-10-02"
+        "date": "2023-10-02",
+        "commentId": 1,
+        "likesCount": 21,
+        "isLikedByUser": true
       }
     ],
     "instructions": [
@@ -42,7 +48,10 @@
         "author": "Nastia",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2024-04-01"
+        "date": "2024-04-01",
+        "commentId": 1,
+        "likesCount": 15,
+        "isLikedByUser": false
       }
     ],
     "instructions": [
@@ -226,47 +235,68 @@
     "seen": 390,
     "likes": 245,
     "comments": [
-        {
+      {
         "author": "Nastia",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2024-04-01"
+        "date": "2024-04-01",
+        "commentId": 1,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
-        {
+      {
         "author": "nazar",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2024-04-01"
+        "date": "2024-04-01",
+        "commentId": 2,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
-        {
+      {
         "author": "Nastia",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2010-09-01"
+        "date": "2010-09-01",
+        "commentId": 3,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
-        {
+      {
         "author": "Olha",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2004-04-01"
+        "date": "2004-04-01",
+        "commentId": 4,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
-        {
+      {
         "author": "Katerina",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2024-05-01"
+        "date": "2024-05-01",
+        "commentId": 5,
+        "likesCount": 15,
+        "isLikedByUser": true
       },
-        {
+      {
         "author": "Nastia",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2014-04-01"
+        "date": "2014-04-01",
+        "commentId": 6,
+        "likesCount": 15,
+        "isLikedByUser": false
       },
-        {
+      {
         "author": "Olena",
         "avatar": "../assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
-        "date": "2022-04-01"
+        "date": "2022-04-01",
+        "commentId": 7,
+        "likesCount": 15,
+        "isLikedByUser": true
       }
     ],
     "instructions": [

@@ -1,57 +1,82 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./RecipeSideBar.css";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 const RecipeSideBar = () => {
-  const [userName, setUserName] = useState("Author Name");
+  const { currentUser, loading, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const initialName =
+    currentUser?.displayName || currentUser?.email?.split("@")[0] || "Guest";
+  const [userName, setUserName] = useState(initialName);
   const [editProfile, setEditProfile] = useState(false);
 
+  useEffect(() => {
+    if (currentUser) {
+      setUserName(currentUser.displayName || currentUser.email.split("@")[0]);
+    }
+  }, [currentUser]);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/");
+    } catch (error) {
+      console.error("Помилка виходу:", error);
+    }
+  };
   const changePhoto = () => {
-    console.log("Change photo");
   };
 
   const handleSave = (e) => {
-    console.log("Save changes: ", e);
+    e.preventDefault(); 
+    console.log("Save changes: ", userName);
     setEditProfile(false);
   };
+
+  if (loading || !currentUser) {
+    return <aside className="recipe-sidebar">Loading profile...</aside>;
+  }
+
+  const getUserPhoto = () => {
+    return currentUser.photoURL || "/assets/images/default-user.png";
+  };
+
   return (
     <aside className="recipe-sidebar">
       {editProfile ? (
-        <form
-          className="edit-user-info"
-          action=""
-          onClose={() => {
-            setEditProfile(false);
-          }}
-        >
+        <form className="edit-user-info" onSubmit={handleSave}>
           <img
-            src="/assets/images/default-user.png"
+            src={getUserPhoto()}
             alt="userPhoto"
             className="userProfilePhoto"
             onClick={changePhoto}
           />
 
-          <label htmlFor="user-name">USERNAME</label>
+          <label htmlFor="userName">USERNAME</label>
           <input
             type="text"
             required
             value={userName}
             id="userName"
             aria-label="edit name-input"
-            onChange={(e)=> setUserName(e.target.value)}
+            onChange={(e) => setUserName(e.target.value)}
           />
 
-          <button href="#" className="chng-user-pas">
+          <button type="button" className="chng-user-pas">
             Change Password
           </button>
 
           <div className="user-profile-actions">
             <button
+              type="submit"
               className="save-user-data-changes"
-              onClick={() => handleSave(userName)}
             >
               SAVE
             </button>
             <button
+              type="button"
               className="cancel-user-data-changes"
               onClick={() => setEditProfile(false)}
             >
@@ -61,10 +86,12 @@ const RecipeSideBar = () => {
         </form>
       ) : (
         <>
-          {/*  */}
           <section className="center-information">
-            <img src="/assets/images/default-user.png" alt="user image" />
-            <p>Author Name</p>
+            <img
+              src={getUserPhoto()}
+              alt="user image"
+            />
+            <p>{userName}</p>
             <button
               className="edit-user-profile"
               onClick={() => {
@@ -74,6 +101,7 @@ const RecipeSideBar = () => {
               Edit profile
             </button>
           </section>
+
           <section className="user-statistics">
             <h2>Statistics</h2>
 
@@ -96,7 +124,9 @@ const RecipeSideBar = () => {
             </ul>
           </section>
 
-          <button className="user-log-out">Log out</button>
+          <button className="user-log-out" onClick={handleLogout}>
+            Log out
+          </button>
         </>
       )}
     </aside>

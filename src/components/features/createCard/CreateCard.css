@@ -6,6 +6,7 @@
   align-items: center;
   cursor: pointer;
   height: 368px;
+  width: 304px;
   transition: 0.2s ease-in-out;
 }
 

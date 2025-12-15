@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./StarRating.css";
 
-const StarRating = ({ cookingTime }) => {
-  const [rating, setRating] = useState(0);
+const StarRating = ({ cookingTime, onRatingChange, currentRating = 0 }) => {
+  const [rating, setRating] = useState(currentRating);
   const [hover, setHover] = useState(0);
+
+  const handleRatingClick = (star) => {
+    setRating(star);
+  };
+
+  useEffect(() => {
+    if (rating > 0 && onRatingChange) {
+      onRatingChange(rating);
+    }
+  }, [rating, onRatingChange]);
 
   return (
     <ul className="stars">
@@ -11,7 +21,7 @@ const StarRating = ({ cookingTime }) => {
         <li key={star}>
           <button
             aria-label={`Rate ${star} star`}
-            onClick={() => setRating(star)}
+            onClick={() => handleRatingClick(star)} 
             onMouseEnter={() => setHover(star)}
             onMouseLeave={() => setHover(0)}
             style={{ background: "none", border: "none", cursor: "pointer" }}

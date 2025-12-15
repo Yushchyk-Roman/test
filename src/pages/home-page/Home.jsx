@@ -9,14 +9,52 @@ import veg_mix from "/assets/images/veg-mix.jpg";
 import tomato_soup from "/assets/images/tomato-soup.jpg";
 
 import recipes from "../../data/cards.json";
-
+import { getRecipes } from "../../services/recipeService.js";
 
 import "./Home.css";
 import Footer from "../../components/layout/footer/Footer.jsx";
 import NavBar from "../../components/layout/nav-bar/NavBar.jsx";
-import Card from "../../components/cards/CardTemplate";
- const Home = () => {
+import Card from "../../components/cards/CardTemplate.jsx";
+
+const Home = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const [openCard, setOpenedCard] = useState(null);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const data = await getRecipes();
+        setRecipes(data);
+      } catch (err) {
+        console.error("Помилка завантаження рецептів з Firestore:", err);
+        setError("Не вдалося завантажити рецепти.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRecipes();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="full-screen-center">
+        <p>Завантаження найкращих рецептів...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="full-screen-center error">
+        <p>{error} Перевірте підключення до Firebase.</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <header>
@@ -43,19 +81,23 @@ import Card from "../../components/cards/CardTemplate";
       </main>
 
       <div className="section-1">
-        <h2>Top Recipes</h2>
+        <h2>Top 3 Recipes</h2>
         <div className="cards">
-          {recipes.map((recipe, index) => (
-            <Card
-            key={index}
-            data={recipe}
-            
-            isOpen={openCard === index}
-            onOpen={() => setOpenedCard(index)}
-            onClose={() => setOpenedCard(null)}
-          />
-          ))}
+          {recipes
+            .slice()
+            .sort((a, b) => b.stars - a.stars)
+            .slice(0, 3)
+            .map((recipe) => (
+              <Card
+                key={recipe.id}
+                data={recipe}
+                isOpen={openCard === recipe.id}
+                onOpen={() => setOpenedCard(recipe.id)}
+                onClose={() => setOpenedCard(null)}
+              />
+            ))}
         </div>
+        {recipes.length === 0 && <p>Наразі рецепти відсутні.</p>}
       </div>
 
       <div className="section-2">
@@ -86,5 +128,5 @@ import Card from "../../components/cards/CardTemplate";
       <Footer />
     </>
   );
-}
+};
 export default Home;

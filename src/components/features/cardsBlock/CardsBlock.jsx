@@ -2,14 +2,8 @@ import { React, useState } from "react";
 import Card from "../../cards/CardTemplate";
 import "./CardsBlock.css";
 
-const CardsBlock = ({ title, cards }) => {
-  // const [isCreating, setIsCreating] = useState(false);
+const CardsBlock = ({ title, cards, allowCreation=false }) => {
   const [openCard, setOpenedCard] = useState(null);
-
-  // const handleSave = (updatedRecipe) => {
-  //   console.log("New data:", updatedRecipe);
-  //   setIsEditing(false);
-  // };
 
   return (
     <section className="cards-block">
@@ -22,23 +16,17 @@ const CardsBlock = ({ title, cards }) => {
           <Card
             key={index}
             data={card}
+            cardIndex={index}
             isOpen={openCard === index}
             onOpen={() => setOpenedCard(index)}
             onClose={() => setOpenedCard(null)}
           />
         ))}
+        {allowCreation && (
         <div className="add-new-card">
-          {/* {isCreating ? (
-            TODO:
-            <RecipeForm
-              onSubmit={handleSave}
-              onCancel={() => setIsCreating(false)}
-              initialData={{}}
-            />
-          ) : ( */}
             <button>+</button>
-           {/* )} */}
         </div>
+        )}
       </div>
     </section>
   );

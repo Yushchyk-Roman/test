@@ -1,7 +1,22 @@
 import React from "react";
 import "./CardComments.css";
+import CommentLikeButton from "../CommentLikeButton";
 
-const CardComments = ({ comments }) => {
+const CardComments = ({
+  comments,
+  newCommentText,
+  setNewCommentText,
+  onSendComment,
+  recipeId,
+  onCommentLike,
+  currentUserId,
+}) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      onSendComment();
+    }
+  };
+
   return (
     <div className="comments">
       <p className="comment-header">Comments</p>
@@ -15,20 +30,44 @@ const CardComments = ({ comments }) => {
           <li key={index}>
             <article>
               <header>
-                <img src={comment.avatar} alt="author avatar" />
+                <img
+                  src={
+                    comment.avatar ||
+                    "../../../public/assets/images/default-user.png"
+                  }
+                  alt="author avatar"
+                />
                 <span>{comment.author}</span>
                 <time dateTime={comment.date}>{comment.date}</time>
               </header>
               <p>{comment.text}</p>
-              <div className="like-comment">
-                <i className="fa-solid fa-heart"></i>
-              </div>
+              <CommentLikeButton
+                recipeId={recipeId}
+                userId={currentUserId}
+                onToggleLikeAPI={onCommentLike}
+                commentId={comment.id || index}
+                likesCount={comment.likesCount || 0}
+                initialIsLiked={comment.isLikedByUser || false}
+              />
             </article>
           </li>
         ))}
 
         <li className="add-comment">
-          <input placeholder="Add comment" type="text" />
+          <input
+            placeholder="Add comment"
+            type="text"
+            value={newCommentText}
+            onChange={(e) => setNewCommentText(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <button
+            className="comment-button"
+            onClick={onSendComment}
+            disabled={newCommentText.trim() === ""}
+          >
+            <i className="fa-solid fa-paper-plane"></i>
+          </button>
         </li>
       </ul>
     </div>

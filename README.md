@@ -1,12 +1,101 @@
-# React + Vite
+# 🍲 Culinary Canvas: Платформа для обміну рецептами
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Огляд проєкту
 
-Currently, two official plugins are available:
+**Culinary Canvas** — це повноцінний вебзастосунок для кулінарних ентузіастів, розроблений для спільного створення, редагування та обміну унікальними рецептами. Проєкт побудований на сучасному стеку React та використовує потужність Firebase (Firestore та Storage) для надійної та масштабованої роботи.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Цей застосунок пропонує користувачам повний контроль над їхнім контентом (CRUD) та забезпечує інтерактивний досвід завдяки функціям лайків, збереження та коментування.
 
-## Expanding the ESLint configuration
+## 🚀 Основні технології (Tech Stack)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Категорія | Технологія | Призначення |
+| :--- | :--- | :--- |
+| **Фронтенд** | `React (Hooks, Context)` | Побудова користувацького інтерфейсу |
+| **Стилізація** | `CSS Modules / SCSS (Custom)` | Дизайн та модульність стилів |
+| **Маршрутизація**| `React Router DOM` | Навігація між сторінками |
+| **Аутентифікація**| `Firebase Authentication` | Вхід/реєстрація користувачів |
+| **База даних** | `Firebase Firestore` | Зберігання даних (рецепти, коментарі, лайки) |
+| **Сховище файлів**| `Firebase Storage` / `Cloudinary` | Завантаження та зберігання зображень рецептів |
+
+## 🔑 Функціональні можливості (Features)
+
+### 🧑‍💻 Для авторизованих користувачів
+* **Аутентифікація:** Безпечна реєстрація та вхід через Firebase.
+* **Створення (Create):** Додавання нових рецептів з усіма необхідними полями та зображенням.
+* **Редагування (Update):** Повний контроль над власними рецептами (редагування тексту та зображень).
+* **Видалення (Delete):** Безпечне видалення рецептів та керування власною бібліотекою.
+
+### 💖 Інтерактивний досвід
+* **Лайки рецептів:** Збереження статусу "лайк" для рецепта в базі даних.
+* **Збереження:** Додавання рецептів у власну колекцію (`Saved`).
+* **Коментування:** Додавання коментарів до рецептів з відображенням даних автора.
+* **Оцінювання:** Можливість поставити оцінку (зірки) рецепту, що зберігається в Firestore.
+
+## ⚙️ Структура даних Firestore
+
+Основний документ `recipes` містить усі дані, необхідні для інтерактивних функцій:
+
+```json
+{
+  "title": "Назва рецепта",
+  "authorId": "UID_користувача",
+  "author": "Ім'я користувача",
+  "time_of_cooking": 45,
+  "imageUrl": "[https://cloudinary.com/](https://cloudinary.com/)...",
+  "likers": ["UID_1", "UID_2", ...],
+  "savers": ["UID_A", "UID_B", ...],
+  "ratings": { 
+    "UID_1": 5, 
+    "UID_2": 4 
+  },
+  "comments": [
+    {
+      "commentId": "...",
+      "authorId": "UID_A",
+      "text": "Смачно!",
+      "likers": ["UID_B", ...], 
+      "date": "2025-12-15"
+    }
+  ]
+}
+```
+
+## 🛠️ Встановлення та запуск
+Для запуску проєкту локально, виконайте наступні кроки.
+
+Передумови
+Node.js (рекомендовано LTS версію)
+
+Встановлений npm або yarn
+
+1. Клонування репозиторію
+```Bash
+git clone <URL_ВАШОГО_РЕПОЗИТОРІЮ>
+cd culinary-canvas
+```
+2. Встановлення залежностей
+```Bash
+npm install або yarn install
+```
+3. Налаштування Firebase
+Створіть файл .env.local у кореневій директорії проєкту та додайте свої конфігураційні ключі Firebase:
+
+4. Запуск проєкту
+```Bash
+npm run dev або yarn dev
+```
+Проєкт буде доступний за адресою: http://localhost:5173 (або іншим портом, вказаним Vite).
+
+
+## 🤝 Внесок у розвиток (Contributing)
+Вітається будь-який внесок у розвиток проєкту. Якщо ви бажаєте додати нову функцію, виправити помилку або покращити документацію, будь ласка:
+
+Створіть форк (Fork) репозиторію.
+
+Створіть нову гілку для своєї функції (git checkout -b feature/AmazingFeature).
+
+Закомітьте свої зміни (git commit -m 'Add some AmazingFeature').
+
+Надішліть зміни на гілку (git push origin feature/AmazingFeature).
+
+Створіть Pull Request.

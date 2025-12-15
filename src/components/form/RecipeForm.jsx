@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import "./RecipeForm.css";
 
-const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
+const RecipeForm = ({ initialData = {}, onSubmit, onCancel, isSaving }) => {
   const [title, setTitle] = useState(initialData.title || "");
   const [ingredientsText, setIngredientsText] = useState(
     initialData.ingredients ? initialData.ingredients.join(", ") : ""
@@ -13,31 +13,52 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
   const [timeOfCooking, setTimeOfCooking] = useState(
     initialData.time_of_cooking || ""
   );
-  const [author, setAuthor] = useState(initialData.author || "");
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const isFormValid =
     title.trim() &&
-    author.trim() &&
     timeOfCooking > 0 &&
     ingredientsText.trim().length > 0 &&
     instructionsText.trim().length > 0 &&
-    imageUrl;
+    (imageUrl.trim() || selectedFile);
 
-  const handleSubmit = () => {
-    onSubmit({
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const ingredients = ingredientsText
+      .split(",")
+      .map((i) => i.trim())
+      .filter(Boolean);
+
+    const instructions = instructionsText
+      .split(".")
+      .map((i) => i.trim())
+      .filter(Boolean);
+
+    const payload = {
       title,
-      author,
-      imageUrl,
       time_of_cooking: parseInt(timeOfCooking, 10),
-      ingredients: ingredientsText
-        .split(",")
-        .map((i) => i.trim())
-        .filter(Boolean),
-      instructions: instructionsText
-        .split(".")
-        .map((i) => i.trim())
-        .filter(Boolean),
-    });
+      ingredients,
+      instructions,
+    };
+    onSubmit(payload, selectedFile);
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (imageUrl) {
+        URL.revokeObjectURL(imageUrl);
+      }
+
+      setSelectedFile(file);
+      const previewUrl = URL.createObjectURL(file);
+      setImageUrl(previewUrl);
+    } else {
+      setSelectedFile(null);
+      if (imageUrl !== initialData.imageUrl) {
+        setImageUrl(initialData.imageUrl || "");
+      }
+    }
   };
 
   return (
@@ -46,9 +67,10 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
         <button className="close-btn" onClick={onCancel}>
           ×
         </button>
-        <div className="edit-form">
+        <form className="edit-form" onSubmit={handleSubmit}>
           <h3>
-            Edit Recipe <i className="fa-solid fa-wand-magic-sparkles"></i>
+            {initialData.id ? "Edit Recipe" : "Create New Recipe"}
+            <i className="fa-solid fa-wand-magic-sparkles"></i>
           </h3>
 
           <label htmlFor="title">
@@ -68,16 +90,14 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
             id="img-upload"
             type="file"
             accept="image/*"
-            onChange={(e) => {
-              const file = e.target.files[0];
-              if (file) {
-                const previewUrl = URL.createObjectURL(file);
-                setImageUrl(previewUrl);
-              }
-            }}
+            onChange={handleFileChange}
           />
-          {imageUrl && (
-            <img src={imageUrl} alt="preview" className="img-preview" />
+          {(imageUrl || initialData.imageUrl) && (
+            <img
+              src={imageUrl || initialData.imageUrl}
+              alt="preview"
+              className="img-preview"
+            />
           )}
 
           <label htmlFor="time-of-cooking">
@@ -89,16 +109,6 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
             min="0"
             value={timeOfCooking}
             onChange={(e) => setTimeOfCooking(e.target.value)}
-          />
-
-          <label htmlFor="author">
-            <i className="fa-solid fa-user"></i> Author
-          </label>
-          <input
-            id="author"
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
           />
 
           <label htmlFor="ingredients">
@@ -121,13 +131,14 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
 
           <div className="edit-actions">
             <button
+              type="submit"
               className="save-changes"
               disabled={!isFormValid}
               onClick={handleSubmit}
             >
-              Save
+              {initialData.id ? "Save" : "Create"}
             </button>
-            <button className="cancel-changes" onClick={onCancel}>
+            <button className="cancel-changes" type="button" onClick={onCancel}>
               Cancel
             </button>
           </div>
@@ -135,7 +146,7 @@ const RecipeForm = ({ initialData = {}, onSubmit, onCancel }) => {
           {!isFormValid && (
             <p className="form-warning">Please fill in all fields correctly.</p>
           )}
-        </div>
+        </form>
       </div>
     </div>
   );
