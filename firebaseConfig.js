@@ -3,9 +3,6 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-console.log("API Key present:", !!import.meta.env.VITE_FIREBASE_API_KEY); // Має вивести TRUE
-console.log("Project ID:", import.meta.env.VITE_FIREBASE_PROJECT_ID);
-
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
