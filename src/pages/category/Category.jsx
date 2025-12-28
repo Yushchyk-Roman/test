@@ -5,7 +5,6 @@ import ControllPanel from "../../components/features/controllPanel/ControllPanel
 import CardsBlock from "../../components/features/cardsBlock/CardsBlock.jsx";
 import Filter from "../../components/features/filter/Filter.jsx";
 import cards from "../../data/cards.json";
-// import categories from "../../data/category.json"
 import "./Category.css";
 
 import { getRecipes } from "../../services/recipeService"; 
