@@ -14,12 +14,12 @@ function App() {
       <AuthProvider>
         <Router basename="/test">
           <Routes>
-            <Route path="/test" element={<Home />} />
-            <Route path="/test/category" element={<Category />} />
-            <Route path="/test/blog" element={<Blog />} />
-            <Route path="/test/my-recipes" element={<Recipes />} />
-            <Route path="/test/login" element={<LoginPage />} />
-            <Route path="/test/register" element={<RegisterPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/my-recipes" element={<Recipes />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </Router>
       </AuthProvider>
