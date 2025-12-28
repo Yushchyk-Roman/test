@@ -40,7 +40,6 @@ const Category = () => {
 
     fetchAllData();
   }, []);
-
   
   const filteredCards =
     selectedCategory === "all"

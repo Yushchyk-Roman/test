@@ -9,7 +9,7 @@ import veg_mix from "../../../public/assets/images/veg-mix.jpg";
 import tomato_soup from "../../../public/assets/images/tomato-soup.jpg";
 
 import recipes from "../../data/cards.json";
-import { getRecipes } from "../../services/recipeService.js";
+import { getRecipes, addRecipeComment } from "../../services/recipeService.js";
 
 import "./Home.css";
 import Footer from "../../components/layout/footer/Footer.jsx";
@@ -38,6 +38,26 @@ const Home = () => {
 
     fetchRecipes();
   }, []);
+
+  const handleAddComment = async (recipeId, commentData) => {
+    try {
+      await addRecipeComment(recipeId, commentData);
+      setRecipes((prevRecipes) =>
+        prevRecipes.map((recipe) => {
+          if (recipe.id === recipeId) {
+            return {
+              ...recipe,
+              comments: [...(recipe.comments || []), commentData],
+            };
+          }
+          return recipe;
+        })
+      );
+    } catch (error) {
+      console.error("Помилка додавання коментаря на головній:", error);
+      alert("Не вдалося додати коментар.");
+    }
+  };
 
   if (loading) {
     return (
@@ -94,6 +114,7 @@ const Home = () => {
                 isOpen={openCard === recipe.id}
                 onOpen={() => setOpenedCard(recipe.id)}
                 onClose={() => setOpenedCard(null)}
+                onAddComment={handleAddComment}
               />
             ))}
         </div>
