@@ -17,13 +17,15 @@ export const uploadFile = async (file) => {
             body: formData,
         });
 
+        console.log("Секс на криші");
+
         if (!response.ok) {
             const errorData = await response.json();
             throw new Error(`Cloudinary Upload Error: ${errorData.error.message}`);
         }
         
         const data = await response.json();
-
+console.log("Гандоніщє");
         return data.secure_url; 
         
     } catch (error) {

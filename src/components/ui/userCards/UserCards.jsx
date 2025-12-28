@@ -53,7 +53,6 @@ const UserCards = () => {
       imageFile
     );
     if (!currentUser || isSaving) {
-      console.log("pedic");
       return;
     }
     setIsSaving(true);
@@ -71,12 +70,16 @@ const UserCards = () => {
 
     try {
       if (imageFile) {
+        console.log("Завантаження нового фото...");
         const newImageUrl = await uploadFile(imageFile);
         updatePayload.imageUrl = newImageUrl;
+        console.log("Запхав хуй: \n поки що все добре", newImageUrl);
       } else if (editingRecipe) {
+            console.log("Запхав хуй");
         updatePayload.imageUrl = editingRecipe.imageUrl;
       } else {
         updatePayload.imageUrl = "/assets/images/default-dish.png";
+        console.log("Випхав хуй");
       }
 
       if (editingRecipe) {
@@ -85,8 +88,7 @@ const UserCards = () => {
         setUserCards((prevCards) =>
           prevCards.map((card) =>
             card.id === editingRecipe.id
-              ?
-                { ...editingRecipe, ...updatePayload }
+              ? { ...editingRecipe, ...updatePayload }
               : card
           )
         );
@@ -95,7 +97,7 @@ const UserCards = () => {
       } else {
         recipeData.authorId = currentUser.uid;
         recipeData.author = authorName;
-
+        recipeData.imageUrl = updatePayload.imageUrl;
         const newRecipe = await createRecipe(
           recipeData,
           currentUser.uid,
@@ -188,7 +190,8 @@ const UserCards = () => {
           {isModalOpen && (
             <Form
               onSubmit={handleSave}
-              onCancel={() => setIsModalOpen(false)}
+              onCancel={handleCloseModal}
+              initialData={editingRecipe || {}}
               isSaving={isSaving}
             />
           )}
