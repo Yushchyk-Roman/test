@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home-page/Home.jsx";
 import Category from "./pages/category/Category.jsx";
-import Blog from "./pages/blog/Blog.jsx";
+import Blog from "./pages/Blog/Blog.jsx";
 import Recipes from "./pages/my-recipe/Recipes.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 // import NotFound from './pages/NotFound/NotFound.jsx';
