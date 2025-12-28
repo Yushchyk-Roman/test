@@ -19,7 +19,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate("test/"); 
+      navigate("/test/"); 
     } catch (error) {
       console.error("Помилка виходу:", error);
       alert("Не вдалося вийти. Спробуйте ще раз.");
@@ -31,7 +31,7 @@ const NavBar = () => {
       <ul>
         <li>
           <NavLink
-            to="test/"
+            to="/test/"
             className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
