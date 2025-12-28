@@ -19,7 +19,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate("/"); 
+      navigate("test/"); 
     } catch (error) {
       console.error("Помилка виходу:", error);
       alert("Не вдалося вийти. Спробуйте ще раз.");
@@ -31,7 +31,7 @@ const NavBar = () => {
       <ul>
         <li>
           <NavLink
-            to="/"
+            to="test/"
             className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
@@ -40,7 +40,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/category"
+            to="/test/category"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             CATEGORY
@@ -48,7 +48,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/blog"
+            to="/test/blog"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             BLOG
@@ -57,7 +57,7 @@ const NavBar = () => {
         {currentUser && (
           <li>
             <NavLink
-              to="/my-recipes"
+              to="/test/my-recipes"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               MY RECIPES
@@ -89,7 +89,7 @@ const NavBar = () => {
           <>
             <li>
               <NavLink
-                to="/login"
+                to="/test/login"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 LOG IN
@@ -97,7 +97,7 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/register"
+                to="/test/register"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 SIGN UP
