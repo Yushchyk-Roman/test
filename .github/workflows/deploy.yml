@@ -38,6 +38,10 @@ jobs:
         VITE_CLOUDINARY_API_KEY: ${{ secrets.VITE_CLOUDINARY_API_KEY }}
         VITE_CLOUDINARY_API_KEY_SECRET: ${{ secrets.VITE_CLOUDINARY_API_KEY_SECRET }}
         VITE_CLOUDINARY_UPLOAD_PRESET: ${{ secrets.VITE_CLOUDINARY_UPLOAD_PRESET }}
+    
+    - name: Create 404 file
+      run: cp ./dist/index.html ./dist/404.html
+    
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/dev'
