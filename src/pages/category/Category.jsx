@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../../components/layout/nav-bar/NavBar.jsx";
 import Footer from "../../components/layout/footer/Footer.jsx";
-import ControllPanel from "../../components/features/ControllPanel/ControllPanel.jsx";
+import ControllPanel from "../../components/features/controllPanel/ControllPanel.jsx";
 import CardsBlock from "../../components/features/cardsBlock/CardsBlock.jsx";
 import Filter from "../../components/features/filter/Filter.jsx";
 import cards from "../../data/cards.json";
