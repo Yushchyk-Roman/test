@@ -1,10 +1,9 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { useAuth } from "../../../context/AuthContext.jsx";
 
 const NavBar = () => {
   const { currentUser, loading, logout } = useAuth();
-  const navigate = useNavigate();
 
   if (loading) {
     return (
@@ -19,7 +18,13 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate("/test"); 
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "active" : "")}
+        end
+      >
+        HOME
+      </NavLink>;
     } catch (error) {
       console.error("Помилка виходу:", error);
       alert("Не вдалося вийти. Спробуйте ще раз.");
@@ -31,7 +36,7 @@ const NavBar = () => {
       <ul>
         <li>
           <NavLink
-            to="/test"
+            to="/"
             className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
@@ -40,7 +45,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/test/category"
+            to="/category"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             CATEGORY
@@ -48,7 +53,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink
-            to="/test/blog"
+            to="/blog"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             BLOG
@@ -57,7 +62,7 @@ const NavBar = () => {
         {currentUser && (
           <li>
             <NavLink
-              to="/test/my-recipes"
+              to="/my-recipes"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               MY RECIPES
@@ -89,7 +94,7 @@ const NavBar = () => {
           <>
             <li>
               <NavLink
-                to="/test/login"
+                to="/login"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 LOG IN
@@ -97,7 +102,7 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/test/register"
+                to="/register"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 SIGN UP
