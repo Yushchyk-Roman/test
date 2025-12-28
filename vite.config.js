@@ -7,5 +7,5 @@ export default defineConfig({
   // base: `/${REPO_NAME}/`,
   
   plugins: [react()],
-  base: '/test/',
+  base: '/',
 })
