@@ -10,7 +10,7 @@
     "date": "2 дні тому",
     "views": 1245,
     "comments": 89,
-    "image": "/assets/images/strawberries.jpg"
+    "image": "assets/images/strawberries.jpg"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/mushroom-soup.jpg"
+    "image": "assets/images/mushroom-soup.jpg"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "date": "1 тиждень тому",
     "views": 2103,
     "comments": 156,
-    "image": "/assets/images/rosil.jpg"
+    "image": "assets/images/rosil.jpg"
   },
   {
     "id": 2,
@@ -49,7 +49,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/rosil.jpg"
+    "image": "assets/images/rosil.jpg"
   },
   {
     "id": 1,
@@ -62,7 +62,7 @@
     "date": "2 дні тому",
     "views": 1245,
     "comments": 89,
-    "image": "/assets/images/borsch.jpg"
+    "image": "assets/images/borsch.jpg"
   },
   {
     "id": 2,
@@ -75,7 +75,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/rosil.jpg"
+    "image": "assets/images/rosil.jpg"
   },
   {
     "id": 3,
@@ -88,7 +88,7 @@
     "date": "1 тиждень тому",
     "views": 2103,
     "comments": 156,
-    "image": "/assets/images/strawberries.jpg"
+    "image": "assets/images/strawberries.jpg"
   },
   {
     "id": 2,
@@ -101,7 +101,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/borsch.jpg"
+    "image": "assets/images/borsch.jpg"
   },
   {
     "id": 1,
@@ -114,7 +114,7 @@
     "date": "2 дні тому",
     "views": 1245,
     "comments": 89,
-    "image": "/assets/images/strawberries.jpg"
+    "image": "assets/images/strawberries.jpg"
   },
   {
     "id": 2,
@@ -127,7 +127,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/borshch-1.jpg"
+    "image": "assets/images/borshch-1.jpg"
   },
   {
     "id": 3,
@@ -140,7 +140,7 @@
     "date": "1 тиждень тому",
     "views": 2103,
     "comments": 156,
-    "image": "/assets/images/strawberries.jpg"
+    "image": "assets/images/strawberries.jpg"
   },
   {
     "id": 2,
@@ -153,7 +153,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/rosil.jpg"
+    "image": "assets/images/rosil.jpg"
   },
   {
     "id": 1,
@@ -166,7 +166,7 @@
     "date": "2 дні тому",
     "views": 1245,
     "comments": 89,
-    "image": "/assets/images/bohrach.jpg"
+    "image": "assets/images/bohrach.jpg"
   },
   {
     "id": 2,
@@ -179,7 +179,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/borsch.jpg"
+    "image": "assets/images/borsch.jpg"
   },
   {
     "id": 3,
@@ -192,7 +192,7 @@
     "date": "1 тиждень тому",
     "views": 2103,
     "comments": 156,
-    "image": "/assets/images/cheesecake.jpg"
+    "image": "assets/images/cheesecake.jpg"
   },
   {
     "id": 2,
@@ -205,7 +205,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/borshch-1.jpg"
+    "image": "assets/images/borshch-1.jpg"
   },
   {
     "id": 1,
@@ -218,7 +218,7 @@
     "date": "2 дні тому",
     "views": 1245,
     "comments": 89,
-    "image": "/assets/images/cheesecake.jpg"
+    "image": "assets/images/cheesecake.jpg"
   },
   {
     "id": 2,
@@ -231,7 +231,7 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/bohrach.jpg"
+    "image": "assets/images/bohrach.jpg"
   },
   {
     "id": 3,
@@ -244,7 +244,7 @@
     "date": "1 тиждень тому",
     "views": 2103,
     "comments": 156,
-    "image": "/assets/images/bohrach.jpg"
+    "image": "assets/images/bohrach.jpg"
   },
   {
     "id": 2,
@@ -257,6 +257,6 @@
     "date": "5 днів тому",
     "views": 892,
     "comments": 45,
-    "image": "/assets/images/cheesecake.jpg"
+    "image": "assets/images/cheesecake.jpg"
   }
 ]

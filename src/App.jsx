@@ -5,8 +5,6 @@ import Category from "./pages/category/Category.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
 import Recipes from "./pages/my-recipe/Recipes.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
-// import NotFound from './pages/NotFound/NotFound.jsx';
-// import Home from ".pages/home-page/Home.jsx";
 import LoginPage from "./pages/Auth/LoginPage.jsx";
 import RegisterPage from "./pages/Auth/RegisterPage.jsx";
 
@@ -14,7 +12,7 @@ function App() {
   return (
     <>
       <AuthProvider>
-        <Router>
+        <Router basename="/test">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category" element={<Category />} />

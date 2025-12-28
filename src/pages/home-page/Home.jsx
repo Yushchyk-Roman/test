@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import bg_photo from "/assets/images/bg-photo.jpg";
-import waiter from "/assets/images/portrait-waiter.jpg";
-import bg_section from "/assets/images/bg-section.jpg";
-import dish_example from "/assets/images/dish-example.jpg";
-import spagetti from "/assets/images/spagetti.jpg";
-import strawberries from "/assets/images/strawberries.jpg";
-import veg_mix from "/assets/images/veg-mix.jpg";
-import tomato_soup from "/assets/images/tomato-soup.jpg";
+import bg_photo from "../../../public/assets/images/bg-photo.jpg";
+import waiter from "../../../public/assets/images/portrait-waiter.jpg";
+import bg_section from "../../../public/assets/images/bg-section.jpg";
+import dish_example from "../../../public/assets/images/dish-example.jpg";
+import spagetti from "../../../public/assets/images/spagetti.jpg";
+import strawberries from "../../../public/assets/images/strawberries.jpg";
+import veg_mix from "../../../public/assets/images/veg-mix.jpg";
+import tomato_soup from "../../../public/assets/images/tomato-soup.jpg";
 
 import recipes from "../../data/cards.json";
 import { getRecipes } from "../../services/recipeService.js";

@@ -2,14 +2,14 @@
   {
     "type": "soups",
     "title": "Bohrach",
-    "imageUrl": "/assets/images/bohrach.jpg",
+    "imageUrl": "assets/images/bohrach.jpg",
     "stars": 5,
     "seen": 100,
     "likes": 50,
     "comments": [
       {
         "author": "John Doe",
-        "avatar": "../../public/assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "This recipe is amazing! I loved it.",
         "date": "2023-10-01",
         "commentId": 0,
@@ -18,7 +18,7 @@
       },
       {
         "author": "Jane Smith",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "I tried this and it turned out great!",
         "date": "2023-10-02",
         "commentId": 1,
@@ -39,14 +39,14 @@
   {
     "type": "soups",
     "title": "Borshch",
-    "imageUrl": "/assets/images/borsch.jpg",
+    "imageUrl": "assets/images/borsch.jpg",
     "stars": 5,
     "seen": 230,
     "likes": 110,
     "comments": [
       {
         "author": "Nastia",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2024-04-01",
         "commentId": 1,
@@ -73,7 +73,7 @@
   {
     "type": "desserts",
     "title": "Cheesecake",
-    "imageUrl": "../assets/images/cheesecake.jpg",
+    "imageUrl": "assets/images/cheesecake.jpg",
     "stars": 4,
     "seen": 150,
     "likes": 80,
@@ -91,7 +91,7 @@
   {
     "type": "soups",
     "title": "Green Borsch",
-    "imageUrl": "/assets/images/green-borshch.jpg",
+    "imageUrl": "assets/images/green-borshch.jpg",
     "stars": 4,
     "seen": 95,
     "likes": 40,
@@ -109,7 +109,7 @@
   {
     "type": "soups",
     "title": "Mushroom Soup",
-    "imageUrl": "../assets/images/mushroom-soup.jpg",
+    "imageUrl": "assets/images/mushroom-soup.jpg",
     "stars": 5,
     "seen": 180,
     "likes": 90,
@@ -127,7 +127,7 @@
   {
     "type": "vegetarian_dishes",
     "title": "Pumpkin Soup",
-    "imageUrl": "../assets/images/pumpkin-soup.jpg",
+    "imageUrl": "assets/images/pumpkin-soup.jpg",
     "stars": 0,
     "seen": 120,
     "likes": 50,
@@ -145,7 +145,7 @@
   {
     "type": "soups",
     "title": "Rosil",
-    "imageUrl": "../assets/images/rosil.jpg",
+    "imageUrl": "assets/images/rosil.jpg",
     "stars": 3,
     "seen": 80,
     "likes": 30,
@@ -163,7 +163,7 @@
   {
     "type": "main_dishes",
     "title": "Spagetti",
-    "imageUrl": "../assets/images/spagetti.jpg",
+    "imageUrl": "assets/images/spagetti.jpg",
     "stars": 5,
     "seen": 200,
     "likes": 100,
@@ -181,7 +181,7 @@
   {
     "type": "desserts",
     "title": "Strawberries Cake",
-    "imageUrl": "../assets/images/strawberries_cake.jpg",
+    "imageUrl": "assets/images/strawberries_cake.jpg",
     "stars": 4,
     "seen": 140,
     "likes": 60,
@@ -199,7 +199,7 @@
   {
     "type": "desserts",
     "title": "Strawberries",
-    "imageUrl": "../assets/images/strawberries.jpg",
+    "imageUrl": "assets/images/strawberries.jpg",
     "stars": 3,
     "seen": 70,
     "likes": 25,
@@ -212,7 +212,7 @@
   {
     "type": "soups",
     "title": "Tomato Soup",
-    "imageUrl": "../assets/images/tomato-soup.jpg",
+    "imageUrl": "assets/images/tomato-soup.jpg",
     "stars": 4,
     "seen": 130,
     "likes": 55,
@@ -230,14 +230,14 @@
   {
     "type": "vegetarian_dishes",
     "title": "Arabic",
-    "imageUrl": "../assets/images/veg-mix.jpg",
+    "imageUrl": "assets/images/veg-mix.jpg",
     "stars": 3,
     "seen": 390,
     "likes": 245,
     "comments": [
       {
         "author": "Nastia",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2024-04-01",
         "commentId": 1,
@@ -246,7 +246,7 @@
       },
       {
         "author": "nazar",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2024-04-01",
         "commentId": 2,
@@ -255,7 +255,7 @@
       },
       {
         "author": "Nastia",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2010-09-01",
         "commentId": 3,
@@ -264,7 +264,7 @@
       },
       {
         "author": "Olha",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2004-04-01",
         "commentId": 4,
@@ -273,7 +273,7 @@
       },
       {
         "author": "Katerina",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2024-05-01",
         "commentId": 5,
@@ -282,7 +282,7 @@
       },
       {
         "author": "Nastia",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2014-04-01",
         "commentId": 6,
@@ -291,7 +291,7 @@
       },
       {
         "author": "Olena",
-        "avatar": "../assets/images/default-user.png",
+        "avatar": "assets/images/default-user.png",
         "text": "Справжній смак дитинства!",
         "date": "2022-04-01",
         "commentId": 7,

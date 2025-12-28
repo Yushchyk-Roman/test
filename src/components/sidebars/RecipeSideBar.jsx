@@ -40,7 +40,7 @@ const RecipeSideBar = () => {
   }
 
   const getUserPhoto = () => {
-    return currentUser.photoURL || "/assets/images/default-user.png";
+    return currentUser.photoURL || "assets/images/default-user.png";
   };
 
   return (

@@ -78,7 +78,7 @@ const UserCards = () => {
             console.log("Запхав хуй");
         updatePayload.imageUrl = editingRecipe.imageUrl;
       } else {
-        updatePayload.imageUrl = "/assets/images/default-dish.png";
+        updatePayload.imageUrl = "assets/images/default-dish.png";
         console.log("Випхав хуй");
       }
 

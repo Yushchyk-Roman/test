@@ -33,7 +33,7 @@ const CardComments = ({
                 <img
                   src={
                     comment.avatar ||
-                    "../../../public/assets/images/default-user.png"
+                    "assets/images/default-user.png"
                   }
                   alt="author avatar"
                 />

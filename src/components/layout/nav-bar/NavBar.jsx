@@ -1,9 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import { useAuth } from "../../../context/AuthContext.jsx";
 
 const NavBar = () => {
   const { currentUser, loading, logout } = useAuth();
+  const navigate = useNavigate();
 
   if (loading) {
     return (
@@ -18,13 +19,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      <NavLink
-        to="/"
-        className={({ isActive }) => (isActive ? "active" : "")}
-        end
-      >
-        HOME
-      </NavLink>;
+      navigate("/"); 
     } catch (error) {
       console.error("Помилка виходу:", error);
       alert("Не вдалося вийти. Спробуйте ще раз.");
